@@ -1,0 +1,112 @@
+want slides:
+	- netflix talk
+	- IBM monitoring workshop
+
+
+Distributed Docker Volumes:
+	- Dat: distributed data backups, version controleled
+		* Streams data backups
+	- Nginx can specify a backup node in the upstream
+	- maxogen/dat-core
+	- look up docker plugins. Recently released.
+	- data-data.com
+
+Tessel Project:
+	- Tessel 2 coming out
+
+
+- MQTT: device to device pub sub
+Rasberry PI
+	- P443-TX
+	- P443-RX
+	- PWebcam
+Twilio: service to send SMS messages
+Node + MQTT = great combination. Something happens in physical world, Node app hears it via MQTT
+
+Cyborgs:
+	- hackster
+	- instrcutables
+	- particle company
+	- @caseorganic
+	- @nexxylove
+	- The JavaScript World Domination article
+
+Netflix:
+	- netflix.com is all node, react
+	- i am manager that wants to ship
+	- Ted flipping knobs
+	- node-bunyan for logging. Streaming json logging format.
+	- jq to process json
+	- bunyan cli will format json logs to human readable formats
+	- check this guys GITHUB
+	- bunyan serializers will take data format it
+	- streams will send data
+	- check out node-vasync. Returns a status object on the the functions in async.
+	- restify has an audit log feature. gives a ton of info on each request. latency for example. gives latency for each function handler
+	- want to capture additonal state on errors.
+	- want to dump all trace level logs when an error. Log warn level on errors.
+	- need a request ID for logs across the entire request life cycle.
+
+Restify talk:
+	- prstat: solaris command to application stats
+	- dtrace to up logs without a restart
+	- check out the drtace script
+	- -abort-on-uncaught-exception is a node 0.12 flag
+	- mdb command on solaris. can run findleaks
+	- ::jsscope
+
+Atlassian:
+	- There is plenty of room at the bottom - Richard Feyman
+	-
+
+
+Monitoring workshop (get slides):
+	what to monitor:
+		- machine and OS
+		- node and V8
+		- application
+		- external dependencies
+
+		- appmetrics npm module for monitoring
+			- supports elastic search and statsD
+		- look into heap dump npm module
+
+Dependency Hell:
+	- look at semantic-release module
+	- look at india module
+	- look at twitter.com/diffyproject
+	- look at next-update module
+	- look at github required status checks
+
+Data:
+	- check out the Thali project
+	- check out peervision, and peervisionary
+	- look at multicast DNS
+
+RedHat:
+	- redhat atomic
+	- openshift
+	- openshift.feedhenry.com
+
+Democracy:
+	- Nextdoor
+	- democracy.io
+	- look up mechanical turk
+	- look at lobbying.rocks
+	- magic: does whatever you want for a price
+
+Stickers:
+	- hexi sticker service
+	- hexi.pics
+	- make hexi stickers for all
+	- look into okrabyte: extracts text from images
+	- nodefest.jp
+
+HapiJS:
+	- look at gitter channel
+	-
+
+	Questions:
+		1. request audit, does hapi have something similar to restify?
+		2. How does pre work? would you use it for proxying requests?
+
