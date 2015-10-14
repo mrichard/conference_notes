@@ -1,0 +1,146 @@
+Advanced Caching (slides on velocity site): http://www.slideshare.net/RakeshChaudhary4/advanced-caching-concepts-velocity-ny-2015
+	Cache collision
+		different device views from same endpoint (adaptive design)
+	Cache pollution
+		order of query parameters
+		ignore redundent parameters
+		ignore vary headers if possible
+
+	POST caching:
+		post response can be cached but need something in the URL (create a md5 of the post body and place it in the URL)
+
+	Pre-fetch: 
+		fetch object before client needs it
+			link rel="prefetch"
+
+	prerefresh:
+		re-validate asychrounously before cache expires
+
+	caching dynamic pages:
+		serve from cache for non logged in users
+		user cookies for personlized content
+
+	Updating the cache:
+		use TTL for best performance
+			hits back to origin are spread out
+		invalidate
+			makes a conditional get to the server (if modified since)
+		purge - telling cache to remove object
+			bad because it creates a spike at origin
+			do not want to clear entire webiste
+
+	FF/Chrome:
+		about:cache
+		chrome:cache - see what is in the cache
+
+	redbot.org - helps to view headers and gives an analysis
+
+	webpagetest.org to view akamai hit rate
+
+
+
+Logstash/Elastic Search (slides on velocity site):
+	https://github.com/sematext/velocity
+
+	kibana - has a query language like grep
+
+	elastic search
+		search built on top of lucene
+		talk to ES via REST api
+		has a query DSL
+
+		mappings in elastic search are like the schema
+
+
+Availabilty and Chaos:
+	
+
+
+Metrics Slides: http://www.slideshare.net/tammyeverts/metrics-metrics-everywhere-but-where-the-heck-do-you-start-53843708
+
+
+
+Day 1 keynotes:
+	client hints for responsive images?
+	problem is all the image renditions?
+	get high performance images book
+
+Monitoring as a service:
+	artofmonitoring.com
+
+	What to Monitor:
+		focus on business outcomes
+		1. Business Logic
+		2. Applications
+		3. Services
+		4. Infrastructure
+
+
+	How:
+		focus on push instead of pull
+		metrics are king - report business metrics
+		automate everything
+
+
+HTTP2:
+	multiplexed
+	http1 6 parallel tcp connections
+	http2 1 tcp connection
+
+	optimize for minimizing request dependencies
+	http2.loadimpact.com/entry
+
+
+Service Workers: https://docs.google.com/presentation/d/1GNLc4oRZzazq4Th8vsH3v5GekAbKWsxIXHbNtQFFG-c/present?slide=id.p19
+	Thread that sits in between the render and netwrok thread
+	service worker can intercept third party requests
+	best supported in chrome
+	2 events when service worker installs:
+		oninstall - can do things like manage your own cache
+		onactivate - triggers when page is refreshed
+	cache api
+
+	service worker has a onfetch event
+		can inspect the fetch details: url, method, headers etc
+
+	chrome://service-worker-internals/
+
+	can synthsize responses
+
+	can look up things in the cache, while request come in
+
+	can enforce third party SLA by killing the request after an amount of time
+
+	navigator.online
+
+	ship diffs! (git patches perhaps)
+
+	look at client hints: will provide client hints to server:
+		Accept-CH
+		Does service worker have access to browser statistics such as viewport size or resolution or connection speed? YES!!
+
+	Does the cache honor caching headers?
+
+
+
+Containers:
+	virtualization and isolation with zones in solaris
+	Zones:
+		security
+		isolation
+		virtualization
+		granularity
+		transparency
+
+	check out techtonic and quay
+
+
+Font loading performance: https://speakerdeck.com/zachleat/the-performance-and-usability-of-font-loading-velocity-nyc-2015
+
+performance on a single page app: http://www.slideshare.net/nicjansma
+
+soasta.io/SPAperfbook
+
+
+
+
